@@ -33,11 +33,6 @@ class LocationManager: NSObject, LocationPermissionsService {
     }
     
     func requestAccess() {
-        /*
-         *      The NSLocationWhenInUseUsageDescription key must be specified in your
-         *      Info.plist; otherwise, this method will do nothing, as your app will be
-         *      assumed not to support WhenInUse authorization.
-         */
         manager.requestWhenInUseAuthorization()
     }
     

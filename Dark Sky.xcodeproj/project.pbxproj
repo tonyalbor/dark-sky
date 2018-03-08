@@ -19,6 +19,9 @@
 		EA0E90152051151A00C5AC7C /* LocationPermissionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */; };
 		EA0E90172051C9F300C5AC7C /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90162051C9F300C5AC7C /* ForecastService.swift */; };
 		EA2AB97B2051E33F00BB28B5 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB97A2051E33F00BB28B5 /* LocationsViewModel.swift */; };
+		EA2AB97D2051EAAE00BB28B5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB97C2051EAAE00BB28B5 /* Network.swift */; };
+		EA2AB97F2051EF5200BB28B5 /* DarkSkyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB97E2051EF5200BB28B5 /* DarkSkyApi.swift */; };
+		EA2AB9812051FB0800BB28B5 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionsService.swift; sourceTree = "<group>"; };
 		EA0E90162051C9F300C5AC7C /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		EA2AB97A2051E33F00BB28B5 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		EA2AB97C2051EAAE00BB28B5 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		EA2AB97E2051EF5200BB28B5 /* DarkSkyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyApi.swift; sourceTree = "<group>"; };
+		EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,9 @@
 				EA2AB9792051E32300BB28B5 /* Locations */,
 				EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */,
 				EA0E90162051C9F300C5AC7C /* ForecastService.swift */,
+				EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */,
+				EA2AB97C2051EAAE00BB28B5 /* Network.swift */,
+				EA2AB97E2051EF5200BB28B5 /* DarkSkyApi.swift */,
 				EA0E8FF22051089E00C5AC7C /* ViewController.swift */,
 				EA0E8FF42051089E00C5AC7C /* Main.storyboard */,
 				EA0E8FF72051089E00C5AC7C /* Assets.xcassets */,
@@ -367,9 +376,12 @@
 			files = (
 				EA0E8FF32051089E00C5AC7C /* ViewController.swift in Sources */,
 				EA2AB97B2051E33F00BB28B5 /* LocationsViewModel.swift in Sources */,
+				EA2AB9812051FB0800BB28B5 /* DailyForecast.swift in Sources */,
 				EA0E8FF12051089E00C5AC7C /* AppDelegate.swift in Sources */,
 				EA0E90152051151A00C5AC7C /* LocationPermissionsService.swift in Sources */,
 				EA0E90172051C9F300C5AC7C /* ForecastService.swift in Sources */,
+				EA2AB97D2051EAAE00BB28B5 /* Network.swift in Sources */,
+				EA2AB97F2051EF5200BB28B5 /* DarkSkyApi.swift in Sources */,
 				EA0E90132051127900C5AC7C /* LocationsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

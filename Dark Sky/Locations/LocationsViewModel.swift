@@ -6,6 +6,7 @@
 //  Copyright © 2018 Tony Albor. All rights reserved.
 //
 
+import CoreLocation
 import RxCocoa
 import RxSwift
 
@@ -59,6 +60,4 @@ class LocationsViewModel: ViewModel {
     }
 }
 
-struct Location {
-    
-}
+typealias Location = CLLocationCoordinate2D

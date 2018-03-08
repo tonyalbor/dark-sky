@@ -15,6 +15,9 @@
 		EA0E8FF82051089E00C5AC7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF72051089E00C5AC7C /* Assets.xcassets */; };
 		EA0E8FFB2051089E00C5AC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF92051089E00C5AC7C /* LaunchScreen.storyboard */; };
 		EA0E90062051089E00C5AC7C /* Dark_SkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90052051089E00C5AC7C /* Dark_SkyTests.swift */; };
+		EA0E90132051127900C5AC7C /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90122051127900C5AC7C /* LocationsTableViewController.swift */; };
+		EA0E90152051151A00C5AC7C /* LocationPermissionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */; };
+		EA0E90172051C9F300C5AC7C /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90162051C9F300C5AC7C /* ForecastService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		EA0E90012051089E00C5AC7C /* Dark SkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark SkyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0E90052051089E00C5AC7C /* Dark_SkyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_SkyTests.swift; sourceTree = "<group>"; };
 		EA0E90072051089E00C5AC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA0E90122051127900C5AC7C /* LocationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
+		EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionsService.swift; sourceTree = "<group>"; };
+		EA0E90162051C9F300C5AC7C /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */,
+				EA0E90122051127900C5AC7C /* LocationsTableViewController.swift */,
+				EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */,
+				EA0E90162051C9F300C5AC7C /* ForecastService.swift */,
 				EA0E8FF22051089E00C5AC7C /* ViewController.swift */,
 				EA0E8FF42051089E00C5AC7C /* Main.storyboard */,
 				EA0E8FF72051089E00C5AC7C /* Assets.xcassets */,
@@ -345,6 +354,9 @@
 			files = (
 				EA0E8FF32051089E00C5AC7C /* ViewController.swift in Sources */,
 				EA0E8FF12051089E00C5AC7C /* AppDelegate.swift in Sources */,
+				EA0E90152051151A00C5AC7C /* LocationPermissionsService.swift in Sources */,
+				EA0E90172051C9F300C5AC7C /* ForecastService.swift in Sources */,
+				EA0E90132051127900C5AC7C /* LocationsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

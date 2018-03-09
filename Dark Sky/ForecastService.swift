@@ -13,9 +13,13 @@ protocol ForecastService {
     func getDailyForecast(location: Location) -> Observable<[DailyForecast]>
 }
 
-struct DarkSkyForecastService: ForecastService {
+class DarkSkyForecastService: ForecastService {
     
     private let network: Network
+    
+    init(network: Network) {
+        self.network = network
+    }
     
     func getDailyForecast(location: Location) -> Observable<[DailyForecast]> {
         let request = AlamofireRequest(

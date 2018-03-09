@@ -1,5 +1,5 @@
 //
-//  LocationsTableViewController.swift
+//  ForecastsTableViewController.swift
 //  Dark Sky
 //
 //  Created by Tony Albor on 3/7/18.
@@ -11,22 +11,28 @@ import CoreLocation
 import RxCocoa
 import RxSwift
 
-class LocationsTableViewController: UITableViewController {
+class ForecastsTableViewController: UITableViewController {
     
-    private var viewModel: LocationsViewModel!
+    private var viewModel: ForecastsViewModel!
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel = LocationsViewModel(locationManager: LocationManager(manager: CLLocationManager()))
+        self.viewModel = ForecastsViewModel(
+            locationManager: LocationManager(manager: CLLocationManager()),
+            forecastService: DarkSkyForecastService(network: AlamofireNetwork())
+        )
         let permissionsButton = UIBarButtonItem()
         permissionsButton.title = "Request"
+        tableView.registerCell(ForecastTableViewCell.self)
         bindViewModel(barButtonItem: permissionsButton)
     }
     
     private func bindViewModel(barButtonItem: UIBarButtonItem) {
         navigationItem.rightBarButtonItem = barButtonItem
-        let input = LocationsViewModel.Input(requestAccess: barButtonItem.rx.tap.asDriver())
+        let input = ForecastsViewModel.Input(
+            requestAccess: barButtonItem.rx.tap.asDriver()
+        )
         
         let output = viewModel.transform(input: input)
         
@@ -34,12 +40,12 @@ class LocationsTableViewController: UITableViewController {
             .drive(barButtonItem.rx.isEnabled)
             .disposed(by: disposeBag)
         
-        
-        output.locations
+        output.forecasts
             .drive(tableView.rx.items) { table, index, element in
-                return table.dequeueReusableCell(withIdentifier: "")!
+                let cell = table.dequeueReusableCell(ForecastTableViewCell.self)
+                cell.viewModel = ForecastViewModel(forecast: element)
+                return cell
             }
             .disposed(by: disposeBag)
-        
     }
 }

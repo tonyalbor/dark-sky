@@ -35,7 +35,7 @@ class ForecastsViewModel: ViewModel {
     
     struct Output {
         let permissionsButtonEnabled: Driver<Bool>
-        let forecasts: Driver<[DailyForecast]>
+        let forecasts: Driver<[Forecast]>
     }
     
     func transform(input: Input) -> Output {
@@ -52,7 +52,7 @@ class ForecastsViewModel: ViewModel {
         let forecasts = locationManager.currentCoordinates()
             .filter { $0 != nil }
             .map { $0! }
-            .flatMap(forecastService.getDailyForecast)
+            .flatMap(forecastService.getForecasts)
             .asDriver(onErrorJustReturn: [])
         
         return Output(permissionsButtonEnabled: buttonEnabled, forecasts: forecasts)

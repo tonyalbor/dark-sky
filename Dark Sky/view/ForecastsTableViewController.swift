@@ -22,6 +22,7 @@ class ForecastsTableViewController: UITableViewController {
             locationManager: LocationManager(manager: CLLocationManager()),
             forecastService: DarkSkyForecastService(network: AlamofireNetwork())
         )
+        navigationItem.title = "Forecast"
         let permissionsButton = UIBarButtonItem()
         permissionsButton.title = "Request"
         tableView.registerCell(ForecastTableViewCell.self)
@@ -49,7 +50,7 @@ class ForecastsTableViewController: UITableViewController {
             }
             .disposed(by: disposeBag)
         
-        tableView.rx.modelSelected(DailyForecast.self)
+        tableView.rx.modelSelected(Forecast.self)
             .asDriver()
             .drive(onNext: { forecast in
                 let detailViewModel = ForecastViewModel(forecast: forecast)

@@ -18,7 +18,7 @@
 		EA0E90172051C9F300C5AC7C /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90162051C9F300C5AC7C /* ForecastService.swift */; };
 		EA2AB97B2051E33F00BB28B5 /* ForecastsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB97A2051E33F00BB28B5 /* ForecastsViewModel.swift */; };
 		EA2AB97D2051EAAE00BB28B5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB97C2051EAAE00BB28B5 /* Network.swift */; };
-		EA2AB9812051FB0800BB28B5 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */; };
+		EA2AB9812051FB0800BB28B5 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9802051FB0800BB28B5 /* Forecast.swift */; };
 		EA2AB9842052030600BB28B5 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9822052030600BB28B5 /* ForecastTableViewCell.swift */; };
 		EA2AB9852052030600BB28B5 /* ForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2AB9832052030600BB28B5 /* ForecastTableViewCell.xib */; };
 		EA2AB987205613DE00BB28B5 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB986205613DE00BB28B5 /* TableViewExtensions.swift */; };
@@ -59,7 +59,7 @@
 		EA0E90162051C9F300C5AC7C /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		EA2AB97A2051E33F00BB28B5 /* ForecastsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsViewModel.swift; sourceTree = "<group>"; };
 		EA2AB97C2051EAAE00BB28B5 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
+		EA2AB9802051FB0800BB28B5 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		EA2AB9822052030600BB28B5 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		EA2AB9832052030600BB28B5 /* ForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastTableViewCell.xib; sourceTree = "<group>"; };
 		EA2AB986205613DE00BB28B5 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 			children = (
 				EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */,
 				EA0E90162051C9F300C5AC7C /* ForecastService.swift */,
-				EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */,
+				EA2AB9802051FB0800BB28B5 /* Forecast.swift */,
 				EA2AB97C2051EAAE00BB28B5 /* Network.swift */,
 			);
 			path = model;
@@ -411,7 +411,7 @@
 				EA2AB98A2056271800BB28B5 /* ForecastDetailViewController.swift in Sources */,
 				EA2AB987205613DE00BB28B5 /* TableViewExtensions.swift in Sources */,
 				EA2AB97B2051E33F00BB28B5 /* ForecastsViewModel.swift in Sources */,
-				EA2AB9812051FB0800BB28B5 /* DailyForecast.swift in Sources */,
+				EA2AB9812051FB0800BB28B5 /* Forecast.swift in Sources */,
 				EA0E8FF12051089E00C5AC7C /* AppDelegate.swift in Sources */,
 				EA0E90152051151A00C5AC7C /* LocationPermissionsService.swift in Sources */,
 				EA0E90172051C9F300C5AC7C /* ForecastService.swift in Sources */,

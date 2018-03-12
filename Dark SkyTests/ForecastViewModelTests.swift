@@ -20,7 +20,7 @@ class ForecastViewModelTests: XCTestCase {
     
     func testInitWithForecast() {
         // Given
-        let forecast = DailyForecast(
+        let forecast = Forecast(
             summary: "Nice",
             time: sundayTimestamp,
             icon: .clearDay,
@@ -32,7 +32,7 @@ class ForecastViewModelTests: XCTestCase {
         let viewModel = ForecastViewModel(forecast: forecast)
         
         // Then
-        XCTAssertEqual(DailyForecast.Icon.clearDay.image(), viewModel.icon)
+        XCTAssertEqual(Forecast.Icon.clearDay.image(), viewModel.icon)
         XCTAssertEqual("Sunday", viewModel.day)
         XCTAssertEqual("Nice", viewModel.summary)
         XCTAssertEqual("87", viewModel.high)

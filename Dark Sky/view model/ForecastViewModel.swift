@@ -18,14 +18,14 @@ struct ForecastViewModel {
 
 extension ForecastViewModel {
     
-    static var dateFormatter: DateFormatter = {
+    private static var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE"
         formatter.timeZone = .current
         return formatter
     }()
     
-    init(forecast: DailyForecast) {
+    init(forecast: Forecast) {
         let date = Date(timeIntervalSince1970: forecast.time)
         let day = ForecastViewModel.dateFormatter.string(from: date)
         let high = String(format: "%.0f", arguments: [forecast.temperatureHigh])

@@ -10,7 +10,7 @@ import RxCocoa
 import RxSwift
 
 protocol ForecastService {
-    func getDailyForecast(location: Location) -> Observable<[DailyForecast]>
+    func getForecasts(location: Location) -> Observable<[Forecast]>
 }
 
 class DarkSkyForecastService: ForecastService {
@@ -21,7 +21,7 @@ class DarkSkyForecastService: ForecastService {
         self.network = network
     }
     
-    func getDailyForecast(location: Location) -> Observable<[DailyForecast]> {
+    func getForecasts(location: Location) -> Observable<[Forecast]> {
         let request = AlamofireRequest(
             method: .get,
             urlString: "https://api.darksky.net/forecast/4b226a790270af7a2e8ca54f80289b83/\(location.latitude),\(location.longitude)"
@@ -32,7 +32,7 @@ class DarkSkyForecastService: ForecastService {
                 guard let dailyJson = json["daily"] as? Json, let data = dailyJson["data"] as? [Json] else {
                     return []
                 }
-                return data.flatMap(DailyForecast.init)
+                return data.flatMap(Forecast.init)
             }
     }
 }

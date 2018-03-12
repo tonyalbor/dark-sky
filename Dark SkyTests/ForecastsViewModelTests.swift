@@ -27,11 +27,11 @@ class MockLocationManager: LocationPermissionsService {
 }
 
 class MockForecastService: ForecastService {
-    private let forecasts: [DailyForecast]
-    init(forecasts: [DailyForecast]) {
+    private let forecasts: [Forecast]
+    init(forecasts: [Forecast]) {
         self.forecasts = forecasts
     }
-    func getDailyForecast(location: Location) -> Observable<[DailyForecast]> {
+    func getForecasts(location: Location) -> Observable<[Forecast]> {
         return .just(forecasts)
     }
 }
@@ -40,9 +40,9 @@ class ForecastsViewModelTests: XCTestCase {
     
     private var disposeBag = DisposeBag()
     private let forecasts = [
-        DailyForecast( summary: "1", time: 1, icon: .clearDay, temperatureLow: 1, temperatureHigh: 1),
-        DailyForecast( summary: "2", time: 2, icon: .clearNight, temperatureLow: 2, temperatureHigh: 2),
-        DailyForecast( summary: "3", time: 3, icon: .rain, temperatureLow: 3, temperatureHigh: 3),
+        Forecast( summary: "1", time: 1, icon: .clearDay, temperatureLow: 1, temperatureHigh: 1),
+        Forecast( summary: "2", time: 2, icon: .clearNight, temperatureLow: 2, temperatureHigh: 2),
+        Forecast( summary: "3", time: 3, icon: .rain, temperatureLow: 3, temperatureHigh: 3),
     ]
     
     override func setUp() {

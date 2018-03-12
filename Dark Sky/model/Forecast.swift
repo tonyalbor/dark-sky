@@ -1,5 +1,5 @@
 //
-//  DailyForecast.swift
+//  Forecast.swift
 //  Dark Sky
 //
 //  Created by Tony Albor on 3/8/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct DailyForecast {
+struct Forecast {
     
     enum Icon: String {
         case clearDay = "clear-day"
@@ -35,7 +35,7 @@ struct DailyForecast {
     let temperatureHigh: Double
 }
 
-extension DailyForecast {
+extension Forecast {
     init?(json: Json) {
         guard let summary = json["summary"] as? String,
             let time = json["time"] as? TimeInterval,
@@ -45,7 +45,7 @@ extension DailyForecast {
                 return nil
         }
         
-        self = DailyForecast(
+        self = Forecast(
             summary: summary,
             time: time,
             icon: Icon(rawValue: iconString) ?? .clearDay,
@@ -55,8 +55,8 @@ extension DailyForecast {
     }
 }
 
-extension DailyForecast: Equatable {}
-func ==(lhs: DailyForecast, rhs: DailyForecast) -> Bool {
+extension Forecast: Equatable {}
+func ==(lhs: Forecast, rhs: Forecast) -> Bool {
     return lhs.summary == rhs.summary &&
         lhs.time == rhs.time &&
         lhs.icon == rhs.icon &&

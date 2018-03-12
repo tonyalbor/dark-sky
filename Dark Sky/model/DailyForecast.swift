@@ -54,3 +54,12 @@ extension DailyForecast {
         )
     }
 }
+
+extension DailyForecast: Equatable {}
+func ==(lhs: DailyForecast, rhs: DailyForecast) -> Bool {
+    return lhs.summary == rhs.summary &&
+        lhs.time == rhs.time &&
+        lhs.icon == rhs.icon &&
+        lhs.temperatureLow == rhs.temperatureLow &&
+        lhs.temperatureHigh == rhs.temperatureHigh
+}

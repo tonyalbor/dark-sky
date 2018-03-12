@@ -17,9 +17,17 @@ struct ForecastViewModel {
 }
 
 extension ForecastViewModel {
+    
+    static var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"
+        formatter.timeZone = .current
+        return formatter
+    }()
+    
     init(forecast: DailyForecast) {
         let date = Date(timeIntervalSince1970: forecast.time)
-        let day = ForecastViewModel.dayStringFromDate(date)
+        let day = ForecastViewModel.dateFormatter.string(from: date)
         let high = String(format: "%.0f", arguments: [forecast.temperatureHigh])
         let low = String(format: "%.0f", arguments: [forecast.temperatureLow])
         self = ForecastViewModel(
@@ -29,19 +37,5 @@ extension ForecastViewModel {
             high: high,
             low: low
         )
-    }
-    
-    private static func dayStringFromDate(_ date: Date) -> String {
-        let day = Calendar.current.component(.weekday, from: date)
-        switch day {
-        case 1: return "Monday"
-        case 2: return "Tuesday"
-        case 3: return "Wednesday"
-        case 4: return "Thursday"
-        case 5: return "Friday"
-        case 6: return "Saturday"
-        case 7: return "Sunday"
-        default: return ""
-        }
     }
 }

@@ -21,10 +21,10 @@ protocol ViewModel {
 
 class ForecastsViewModel: ViewModel {
     
-    private let locationManager: LocationManager
+    private let locationManager: LocationPermissionsService
     private let forecastService: ForecastService
     
-    init(locationManager: LocationManager, forecastService: ForecastService) {
+    init(locationManager: LocationPermissionsService, forecastService: ForecastService) {
         self.locationManager = locationManager
         self.forecastService = forecastService
     }

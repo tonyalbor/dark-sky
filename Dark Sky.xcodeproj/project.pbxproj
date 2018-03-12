@@ -14,7 +14,6 @@
 		EA0E8FF62051089E00C5AC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF42051089E00C5AC7C /* Main.storyboard */; };
 		EA0E8FF82051089E00C5AC7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF72051089E00C5AC7C /* Assets.xcassets */; };
 		EA0E8FFB2051089E00C5AC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF92051089E00C5AC7C /* LaunchScreen.storyboard */; };
-		EA0E90062051089E00C5AC7C /* Dark_SkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90052051089E00C5AC7C /* Dark_SkyTests.swift */; };
 		EA0E90132051127900C5AC7C /* ForecastsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90122051127900C5AC7C /* ForecastsTableViewController.swift */; };
 		EA0E90152051151A00C5AC7C /* LocationPermissionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */; };
 		EA0E90172051C9F300C5AC7C /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90162051C9F300C5AC7C /* ForecastService.swift */; };
@@ -27,6 +26,8 @@
 		EA2AB98A2056271800BB28B5 /* ForecastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9882056271800BB28B5 /* ForecastDetailViewController.swift */; };
 		EA2AB98B2056271800BB28B5 /* ForecastDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2AB9892056271800BB28B5 /* ForecastDetailViewController.xib */; };
 		EA2AB98F20562BA100BB28B5 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB98E20562BA100BB28B5 /* ForecastViewModel.swift */; };
+		EA2AB9942056333E00BB28B5 /* ForecastsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9932056333E00BB28B5 /* ForecastsViewModelTests.swift */; };
+		EA2AB9962056553800BB28B5 /* ForecastViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9952056553800BB28B5 /* ForecastViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,6 @@
 		EA0E8FFA2051089E00C5AC7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0E8FFC2051089E00C5AC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0E90012051089E00C5AC7C /* Dark SkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark SkyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA0E90052051089E00C5AC7C /* Dark_SkyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_SkyTests.swift; sourceTree = "<group>"; };
 		EA0E90072051089E00C5AC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0E90122051127900C5AC7C /* ForecastsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsTableViewController.swift; sourceTree = "<group>"; };
 		EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionsService.swift; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		EA2AB9882056271800BB28B5 /* ForecastDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewController.swift; sourceTree = "<group>"; };
 		EA2AB9892056271800BB28B5 /* ForecastDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastDetailViewController.xib; sourceTree = "<group>"; };
 		EA2AB98E20562BA100BB28B5 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
+		EA2AB9932056333E00BB28B5 /* ForecastsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsViewModelTests.swift; sourceTree = "<group>"; };
+		EA2AB9952056553800BB28B5 /* ForecastViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +150,9 @@
 		EA0E90042051089E00C5AC7C /* Dark SkyTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA0E90052051089E00C5AC7C /* Dark_SkyTests.swift */,
 				EA0E90072051089E00C5AC7C /* Info.plist */,
+				EA2AB9932056333E00BB28B5 /* ForecastsViewModelTests.swift */,
+				EA2AB9952056553800BB28B5 /* ForecastViewModelTests.swift */,
 			);
 			path = "Dark SkyTests";
 			sourceTree = "<group>";
@@ -185,8 +188,7 @@
 				EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */,
 				EA2AB97C2051EAAE00BB28B5 /* Network.swift */,
 			);
-			name = model;
-			path = "model";
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +251,7 @@
 					};
 					EA0E90002051089E00C5AC7C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EA0E8FEC2051089E00C5AC7C;
 					};
@@ -427,7 +430,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0E90062051089E00C5AC7C /* Dark_SkyTests.swift in Sources */,
+				EA2AB9942056333E00BB28B5 /* ForecastsViewModelTests.swift in Sources */,
+				EA2AB9962056553800BB28B5 /* ForecastViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,12 +610,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 998B9U96MF;
 				INFOPLIST_FILE = "Dark SkyTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyalbor.Dark-SkyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dark Sky.app/Dark Sky";
@@ -624,6 +630,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 998B9U96MF;
 				INFOPLIST_FILE = "Dark SkyTests/Info.plist";

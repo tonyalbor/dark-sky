@@ -10,7 +10,6 @@
 		45673DD603AC6EE0A40C8ABA /* Pods_Dark_SkyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9517BA2E03C924ABFCECDD86 /* Pods_Dark_SkyTests.framework */; };
 		6CD0D38F346EFE84556C654D /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFCD34A675DA13293C7829C /* Pods_Dark_Sky.framework */; };
 		EA0E8FF12051089E00C5AC7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */; };
-		EA0E8FF32051089E00C5AC7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E8FF22051089E00C5AC7C /* ViewController.swift */; };
 		EA0E8FF62051089E00C5AC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF42051089E00C5AC7C /* Main.storyboard */; };
 		EA0E8FF82051089E00C5AC7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF72051089E00C5AC7C /* Assets.xcassets */; };
 		EA0E8FFB2051089E00C5AC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF92051089E00C5AC7C /* LaunchScreen.storyboard */; };
@@ -49,7 +48,6 @@
 		BCBC03222B2053CEC6D18CC9 /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
 		EA0E8FED2051089E00C5AC7C /* Dark Sky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Sky.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA0E8FF22051089E00C5AC7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA0E8FF52051089E00C5AC7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA0E8FF72051089E00C5AC7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0E8FFA2051089E00C5AC7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				EA2AB99020562BF500BB28B5 /* view model */,
 				EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */,
 				EA2AB986205613DE00BB28B5 /* TableViewExtensions.swift */,
-				EA0E8FF22051089E00C5AC7C /* ViewController.swift */,
 				EA0E8FF72051089E00C5AC7C /* Assets.xcassets */,
 				EA0E8FFC2051089E00C5AC7C /* Info.plist */,
 			);
@@ -412,7 +409,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA2AB98A2056271800BB28B5 /* ForecastDetailViewController.swift in Sources */,
-				EA0E8FF32051089E00C5AC7C /* ViewController.swift in Sources */,
 				EA2AB987205613DE00BB28B5 /* TableViewExtensions.swift in Sources */,
 				EA2AB97B2051E33F00BB28B5 /* ForecastsViewModel.swift in Sources */,
 				EA2AB9812051FB0800BB28B5 /* DailyForecast.swift in Sources */,

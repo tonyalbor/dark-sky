@@ -23,6 +23,7 @@
 		EA2AB9812051FB0800BB28B5 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */; };
 		EA2AB9842052030600BB28B5 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9822052030600BB28B5 /* ForecastTableViewCell.swift */; };
 		EA2AB9852052030600BB28B5 /* ForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2AB9832052030600BB28B5 /* ForecastTableViewCell.xib */; };
+		EA2AB987205613DE00BB28B5 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB986205613DE00BB28B5 /* TableViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		EA2AB9822052030600BB28B5 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		EA2AB9832052030600BB28B5 /* ForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastTableViewCell.xib; sourceTree = "<group>"; };
+		EA2AB986205613DE00BB28B5 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				EA2AB9792051E32300BB28B5 /* Locations */,
 				EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */,
+				EA2AB986205613DE00BB28B5 /* TableViewExtensions.swift */,
 				EA0E90162051C9F300C5AC7C /* ForecastService.swift */,
 				EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */,
 				EA2AB97C2051EAAE00BB28B5 /* Network.swift */,
@@ -379,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0E8FF32051089E00C5AC7C /* ViewController.swift in Sources */,
+				EA2AB987205613DE00BB28B5 /* TableViewExtensions.swift in Sources */,
 				EA2AB97B2051E33F00BB28B5 /* ForecastsViewModel.swift in Sources */,
 				EA2AB9812051FB0800BB28B5 /* DailyForecast.swift in Sources */,
 				EA0E8FF12051089E00C5AC7C /* AppDelegate.swift in Sources */,

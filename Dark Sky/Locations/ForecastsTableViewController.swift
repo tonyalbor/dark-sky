@@ -25,6 +25,8 @@ class ForecastsTableViewController: UITableViewController {
         let permissionsButton = UIBarButtonItem()
         permissionsButton.title = "Request"
         tableView.registerCell(ForecastTableViewCell.self)
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableViewAutomaticDimension
         bindViewModel(barButtonItem: permissionsButton)
     }
     
@@ -41,9 +43,9 @@ class ForecastsTableViewController: UITableViewController {
             .disposed(by: disposeBag)
         
         output.forecasts
-            .drive(tableView.rx.items) { table, index, element in
+            .drive(tableView.rx.items) { table, index, forecast in
                 let cell = table.dequeueReusableCell(ForecastTableViewCell.self)
-                cell.viewModel = ForecastViewModel(forecast: element)
+                cell.viewModel = ForecastViewModel(forecast: forecast)
                 return cell
             }
             .disposed(by: disposeBag)

@@ -8,25 +8,25 @@
 
 import UIKit
 
-protocol Nib {
-    static var nib: UINib { get }
-}
-
-protocol ReuseIdentifiable {
-    static var reuseIdentifier: String { get }
-}
-
-extension ReuseIdentifiable where Self: UITableViewCell {
-    static var reuseIdentifier: String {
-        return String(describing: self)
+class ForecastTableViewCell: UITableViewCell, ReusableCell {
+    
+    @IBOutlet private weak var icon: UIImageView!
+    @IBOutlet private weak var day: UILabel!
+    @IBOutlet private weak var high: UILabel!
+    @IBOutlet private weak var low: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        low.textColor = UIColor.black.withAlphaComponent(0.5)
     }
-}
-
-protocol ReusableCell: Nib, ReuseIdentifiable {}
-
-extension ReusableCell where Self: UITableViewCell {
-    static var nib: UINib {
-        return UINib(nibName: reuseIdentifier, bundle: nil)
+    
+    var viewModel: ForecastViewModel? {
+        didSet {
+            icon.image = viewModel?.icon
+            day.text = viewModel?.day
+            high.text = viewModel?.high
+            low.text = viewModel?.low
+        }
     }
 }
 
@@ -39,39 +39,29 @@ struct ForecastViewModel {
 
 extension ForecastViewModel {
     init(forecast: DailyForecast) {
-        self = ForecastViewModel(icon: UIImage(), day: "", high: "High: \(forecast.temperatureHigh)"
-            , low: "Low: \(forecast.temperatureLow)")
-    }
-}
-
-extension UITableView {
-    func registerCell<Cell: UITableViewCell>(_: Cell.Type = Cell.self) where Cell: ReusableCell {
-        register(Cell.nib, forCellReuseIdentifier: Cell.reuseIdentifier)
-    }
-    
-    func dequeueReusableCell<Cell: UITableViewCell>(_: Cell.Type = Cell.self) -> Cell where Cell: ReusableCell {
-        return dequeueReusableCell(withIdentifier: Cell.reuseIdentifier) as! Cell
-    }
-}
-
-class ForecastTableViewCell: UITableViewCell, ReusableCell {
-    
-    @IBOutlet private weak var icon: UIImageView!
-    @IBOutlet private weak var day: UILabel!
-    @IBOutlet private weak var high: UILabel!
-    @IBOutlet private weak var low: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+        let date = Date(timeIntervalSince1970: forecast.time)
+        let day = ForecastViewModel.dayStringFromDate(date)
+        let high = String(format: "%.0f", arguments: [forecast.temperatureHigh])
+        let low = String(format: "%.0f", arguments: [forecast.temperatureLow])
+        self = ForecastViewModel(
+            icon: UIImage(),
+            day: day,
+            high: high,
+            low: low
+        )
     }
     
-    var viewModel: ForecastViewModel? {
-        didSet {
-            icon.image = viewModel?.icon
-            day.text = viewModel?.day
-            high.text = viewModel?.high
-            low.text = viewModel?.low
+    private static func dayStringFromDate(_ date: Date) -> String {
+        let day = Calendar.current.component(.weekday, from: date)
+        switch day {
+        case 1: return "Monday"
+        case 2: return "Tuesday"
+        case 3: return "Wednesday"
+        case 4: return "Thursday"
+        case 5: return "Friday"
+        case 6: return "Saturday"
+        case 7: return "Sunday"
+        default: return ""
         }
     }
 }

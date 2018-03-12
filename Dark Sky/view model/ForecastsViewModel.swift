@@ -53,7 +53,6 @@ class ForecastsViewModel: ViewModel {
             .filter { $0 != nil }
             .map { $0! }
             .flatMap(forecastService.getDailyForecast)
-            .shareReplay(1)
             .asDriver(onErrorJustReturn: [])
         
         return Output(permissionsButtonEnabled: buttonEnabled, forecasts: forecasts)

@@ -133,7 +133,7 @@
 		EA0E8FEF2051089E00C5AC7C /* Dark Sky */ = {
 			isa = PBXGroup;
 			children = (
-				EA2AB99220562C0800BB28B5 /* model */,
+				EA2AB99220562C0800BB28B5 /* model2 */,
 				EA2AB99120562C0500BB28B5 /* view */,
 				EA2AB99020562BF500BB28B5 /* view model */,
 				EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */,
@@ -177,7 +177,7 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		EA2AB99220562C0800BB28B5 /* model */ = {
+		EA2AB99220562C0800BB28B5 /* model2 */ = {
 			isa = PBXGroup;
 			children = (
 				EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */,
@@ -185,7 +185,7 @@
 				EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */,
 				EA2AB97C2051EAAE00BB28B5 /* Network.swift */,
 			);
-			name = model;
+			name = model2;
 			path = "New Group1";
 			sourceTree = "<group>";
 		};

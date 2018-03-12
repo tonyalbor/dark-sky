@@ -44,7 +44,7 @@ extension ForecastViewModel {
         let high = String(format: "%.0f", arguments: [forecast.temperatureHigh])
         let low = String(format: "%.0f", arguments: [forecast.temperatureLow])
         self = ForecastViewModel(
-            icon: UIImage(),
+            icon: forecast.icon.image(),
             day: day,
             high: high,
             low: low

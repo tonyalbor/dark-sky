@@ -24,6 +24,9 @@
 		EA2AB9842052030600BB28B5 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9822052030600BB28B5 /* ForecastTableViewCell.swift */; };
 		EA2AB9852052030600BB28B5 /* ForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2AB9832052030600BB28B5 /* ForecastTableViewCell.xib */; };
 		EA2AB987205613DE00BB28B5 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB986205613DE00BB28B5 /* TableViewExtensions.swift */; };
+		EA2AB98A2056271800BB28B5 /* ForecastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9882056271800BB28B5 /* ForecastDetailViewController.swift */; };
+		EA2AB98B2056271800BB28B5 /* ForecastDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2AB9892056271800BB28B5 /* ForecastDetailViewController.xib */; };
+		EA2AB98F20562BA100BB28B5 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB98E20562BA100BB28B5 /* ForecastViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		EA2AB9822052030600BB28B5 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		EA2AB9832052030600BB28B5 /* ForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastTableViewCell.xib; sourceTree = "<group>"; };
 		EA2AB986205613DE00BB28B5 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
+		EA2AB9882056271800BB28B5 /* ForecastDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewController.swift; sourceTree = "<group>"; };
+		EA2AB9892056271800BB28B5 /* ForecastDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastDetailViewController.xib; sourceTree = "<group>"; };
+		EA2AB98E20562BA100BB28B5 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,16 +133,13 @@
 		EA0E8FEF2051089E00C5AC7C /* Dark Sky */ = {
 			isa = PBXGroup;
 			children = (
-				EA2AB9792051E32300BB28B5 /* Locations */,
+				EA2AB99220562C0800BB28B5 /* model */,
+				EA2AB99120562C0500BB28B5 /* view */,
+				EA2AB99020562BF500BB28B5 /* view model */,
 				EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */,
 				EA2AB986205613DE00BB28B5 /* TableViewExtensions.swift */,
-				EA0E90162051C9F300C5AC7C /* ForecastService.swift */,
-				EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */,
-				EA2AB97C2051EAAE00BB28B5 /* Network.swift */,
 				EA0E8FF22051089E00C5AC7C /* ViewController.swift */,
-				EA0E8FF42051089E00C5AC7C /* Main.storyboard */,
 				EA0E8FF72051089E00C5AC7C /* Assets.xcassets */,
-				EA0E8FF92051089E00C5AC7C /* LaunchScreen.storyboard */,
 				EA0E8FFC2051089E00C5AC7C /* Info.plist */,
 			);
 			path = "Dark Sky";
@@ -151,16 +154,39 @@
 			path = "Dark SkyTests";
 			sourceTree = "<group>";
 		};
-		EA2AB9792051E32300BB28B5 /* Locations */ = {
+		EA2AB99020562BF500BB28B5 /* view model */ = {
 			isa = PBXGroup;
 			children = (
+				EA2AB97A2051E33F00BB28B5 /* ForecastsViewModel.swift */,
+				EA2AB98E20562BA100BB28B5 /* ForecastViewModel.swift */,
+			);
+			path = "view model";
+			sourceTree = "<group>";
+		};
+		EA2AB99120562C0500BB28B5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E8FF42051089E00C5AC7C /* Main.storyboard */,
+				EA0E8FF92051089E00C5AC7C /* LaunchScreen.storyboard */,
 				EA0E90122051127900C5AC7C /* ForecastsTableViewController.swift */,
 				EA2AB9822052030600BB28B5 /* ForecastTableViewCell.swift */,
 				EA2AB9832052030600BB28B5 /* ForecastTableViewCell.xib */,
-				EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */,
-				EA2AB97A2051E33F00BB28B5 /* ForecastsViewModel.swift */,
+				EA2AB9882056271800BB28B5 /* ForecastDetailViewController.swift */,
+				EA2AB9892056271800BB28B5 /* ForecastDetailViewController.xib */,
 			);
-			path = Locations;
+			path = view;
+			sourceTree = "<group>";
+		};
+		EA2AB99220562C0800BB28B5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EA0E90142051151A00C5AC7C /* LocationPermissionsService.swift */,
+				EA0E90162051C9F300C5AC7C /* ForecastService.swift */,
+				EA2AB9802051FB0800BB28B5 /* DailyForecast.swift */,
+				EA2AB97C2051EAAE00BB28B5 /* Network.swift */,
+			);
+			name = model;
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +281,7 @@
 				EA2AB9852052030600BB28B5 /* ForecastTableViewCell.xib in Resources */,
 				EA0E8FFB2051089E00C5AC7C /* LaunchScreen.storyboard in Resources */,
 				EA0E8FF82051089E00C5AC7C /* Assets.xcassets in Resources */,
+				EA2AB98B2056271800BB28B5 /* ForecastDetailViewController.xib in Resources */,
 				EA0E8FF62051089E00C5AC7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2AB98A2056271800BB28B5 /* ForecastDetailViewController.swift in Sources */,
 				EA0E8FF32051089E00C5AC7C /* ViewController.swift in Sources */,
 				EA2AB987205613DE00BB28B5 /* TableViewExtensions.swift in Sources */,
 				EA2AB97B2051E33F00BB28B5 /* ForecastsViewModel.swift in Sources */,
@@ -389,6 +417,7 @@
 				EA0E90152051151A00C5AC7C /* LocationPermissionsService.swift in Sources */,
 				EA0E90172051C9F300C5AC7C /* ForecastService.swift in Sources */,
 				EA2AB9842052030600BB28B5 /* ForecastTableViewCell.swift in Sources */,
+				EA2AB98F20562BA100BB28B5 /* ForecastViewModel.swift in Sources */,
 				EA2AB97D2051EAAE00BB28B5 /* Network.swift in Sources */,
 				EA0E90132051127900C5AC7C /* ForecastsTableViewController.swift in Sources */,
 			);

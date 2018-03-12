@@ -12,6 +12,16 @@ protocol Nib {
     static var nib: UINib { get }
 }
 
+protocol NibIdentifiable {
+    static var nibName: String { get }
+}
+
+extension NibIdentifiable {
+    static var nibName: String {
+        return String(describing: self)
+    }
+}
+
 protocol ReuseIdentifiable {
     static var reuseIdentifier: String { get }
 }

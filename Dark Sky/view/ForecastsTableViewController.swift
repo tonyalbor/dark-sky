@@ -25,8 +25,7 @@ class ForecastsTableViewController: UITableViewController {
         let permissionsButton = UIBarButtonItem()
         permissionsButton.title = "Request"
         tableView.registerCell(ForecastTableViewCell.self)
-        tableView.estimatedRowHeight = 50
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = 60
         bindViewModel(barButtonItem: permissionsButton)
     }
     
@@ -48,6 +47,15 @@ class ForecastsTableViewController: UITableViewController {
                 cell.viewModel = ForecastViewModel(forecast: forecast)
                 return cell
             }
+            .disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(DailyForecast.self)
+            .asDriver()
+            .drive(onNext: { forecast in
+                let detailViewModel = ForecastViewModel(forecast: forecast)
+                let detail = ForecastDetailViewController(viewModel: detailViewModel)
+                self.navigationController?.pushViewController(detail, animated: true)
+            })
             .disposed(by: disposeBag)
     }
 }

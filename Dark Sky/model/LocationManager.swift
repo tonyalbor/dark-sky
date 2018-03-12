@@ -9,13 +9,13 @@
 import RxSwift
 import CoreLocation
 
-protocol LocationPermissionsService {
+protocol LocationManager {
     func isEnabled() -> Observable<Bool>
     func requestAccess()
     func currentCoordinates() -> Observable<CLLocationCoordinate2D?>
 }
 
-class LocationManager: NSObject, LocationPermissionsService {
+class CoreLocationManager: NSObject, LocationManager {
     
     private let manager: CLLocationManager
     private let isEnabledSubject: Variable<Bool> = Variable(false)
@@ -41,7 +41,7 @@ class LocationManager: NSObject, LocationPermissionsService {
     }
 }
 
-extension LocationManager: CLLocationManagerDelegate {
+extension CoreLocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocationVariable.value = locations.last?.coordinate

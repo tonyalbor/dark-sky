@@ -19,7 +19,7 @@ class ForecastsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = ForecastsViewModel(
-            locationManager: LocationManager(manager: CLLocationManager()),
+            locationManager: CoreLocationManager(manager: CLLocationManager()),
             forecastService: DarkSkyForecastService(network: AlamofireNetwork())
         )
         navigationItem.title = "Forecast"

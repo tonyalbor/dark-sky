@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 @testable import Dark_Sky
 
-class MockLocationManager: LocationPermissionsService {
+class MockLocationManager: LocationManager {
     private let enabled: Bool
     init(enabled: Bool) {
         self.enabled = enabled

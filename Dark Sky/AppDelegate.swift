@@ -6,6 +6,7 @@
 //  Copyright © 2018 Tony Albor. All rights reserved.
 //
 
+import CoreLocation
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let viewModel = ForecastsViewModel(
+            locationManager: CoreLocationManager(manager: CLLocationManager()),
+            forecastService: DarkSkyForecastService(network: AlamofireNetwork())
+        )
+        let forecasts = ForecastsTableViewController(viewModel: viewModel)
+        let navigation = UINavigationController(rootViewController: forecasts)
+        
+        window?.rootViewController = navigation
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

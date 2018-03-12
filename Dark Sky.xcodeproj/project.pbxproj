@@ -10,10 +10,8 @@
 		45673DD603AC6EE0A40C8ABA /* Pods_Dark_SkyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9517BA2E03C924ABFCECDD86 /* Pods_Dark_SkyTests.framework */; };
 		6CD0D38F346EFE84556C654D /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFCD34A675DA13293C7829C /* Pods_Dark_Sky.framework */; };
 		EA0E8FF12051089E00C5AC7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */; };
-		EA0E8FF62051089E00C5AC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF42051089E00C5AC7C /* Main.storyboard */; };
 		EA0E8FF82051089E00C5AC7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF72051089E00C5AC7C /* Assets.xcassets */; };
 		EA0E8FFB2051089E00C5AC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0E8FF92051089E00C5AC7C /* LaunchScreen.storyboard */; };
-		EA0E90132051127900C5AC7C /* ForecastsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90122051127900C5AC7C /* ForecastsTableViewController.swift */; };
 		EA0E90152051151A00C5AC7C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90142051151A00C5AC7C /* LocationManager.swift */; };
 		EA0E90172051C9F300C5AC7C /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E90162051C9F300C5AC7C /* ForecastService.swift */; };
 		EA2AB97B2051E33F00BB28B5 /* ForecastsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB97A2051E33F00BB28B5 /* ForecastsViewModel.swift */; };
@@ -27,6 +25,8 @@
 		EA2AB98F20562BA100BB28B5 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB98E20562BA100BB28B5 /* ForecastViewModel.swift */; };
 		EA2AB9942056333E00BB28B5 /* ForecastsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9932056333E00BB28B5 /* ForecastsViewModelTests.swift */; };
 		EA2AB9962056553800BB28B5 /* ForecastViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB9952056553800BB28B5 /* ForecastViewModelTests.swift */; };
+		EA2AB99D205662E600BB28B5 /* ForecastsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2AB99B205662E600BB28B5 /* ForecastsTableViewController.swift */; };
+		EA2AB99E205662E600BB28B5 /* ForecastsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2AB99C205662E600BB28B5 /* ForecastsTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +48,11 @@
 		BCBC03222B2053CEC6D18CC9 /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
 		EA0E8FED2051089E00C5AC7C /* Dark Sky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Sky.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0E8FF02051089E00C5AC7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA0E8FF52051089E00C5AC7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA0E8FF72051089E00C5AC7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0E8FFA2051089E00C5AC7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0E8FFC2051089E00C5AC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0E90012051089E00C5AC7C /* Dark SkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark SkyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0E90072051089E00C5AC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA0E90122051127900C5AC7C /* ForecastsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsTableViewController.swift; sourceTree = "<group>"; };
 		EA0E90142051151A00C5AC7C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EA0E90162051C9F300C5AC7C /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		EA2AB97A2051E33F00BB28B5 /* ForecastsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsViewModel.swift; sourceTree = "<group>"; };
@@ -68,6 +66,8 @@
 		EA2AB98E20562BA100BB28B5 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		EA2AB9932056333E00BB28B5 /* ForecastsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsViewModelTests.swift; sourceTree = "<group>"; };
 		EA2AB9952056553800BB28B5 /* ForecastViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModelTests.swift; sourceTree = "<group>"; };
+		EA2AB99B205662E600BB28B5 /* ForecastsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsTableViewController.swift; sourceTree = "<group>"; };
+		EA2AB99C205662E600BB28B5 /* ForecastsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastsTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,9 +166,9 @@
 		EA2AB99120562C0500BB28B5 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				EA0E8FF42051089E00C5AC7C /* Main.storyboard */,
 				EA0E8FF92051089E00C5AC7C /* LaunchScreen.storyboard */,
-				EA0E90122051127900C5AC7C /* ForecastsTableViewController.swift */,
+				EA2AB99B205662E600BB28B5 /* ForecastsTableViewController.swift */,
+				EA2AB99C205662E600BB28B5 /* ForecastsTableViewController.xib */,
 				EA2AB9822052030600BB28B5 /* ForecastTableViewCell.swift */,
 				EA2AB9832052030600BB28B5 /* ForecastTableViewCell.xib */,
 				EA2AB9882056271800BB28B5 /* ForecastDetailViewController.swift */,
@@ -278,11 +278,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2AB99E205662E600BB28B5 /* ForecastsTableViewController.xib in Resources */,
 				EA2AB9852052030600BB28B5 /* ForecastTableViewCell.xib in Resources */,
 				EA0E8FFB2051089E00C5AC7C /* LaunchScreen.storyboard in Resources */,
 				EA0E8FF82051089E00C5AC7C /* Assets.xcassets in Resources */,
 				EA2AB98B2056271800BB28B5 /* ForecastDetailViewController.xib in Resources */,
-				EA0E8FF62051089E00C5AC7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +410,7 @@
 			files = (
 				EA2AB98A2056271800BB28B5 /* ForecastDetailViewController.swift in Sources */,
 				EA2AB987205613DE00BB28B5 /* TableViewExtensions.swift in Sources */,
+				EA2AB99D205662E600BB28B5 /* ForecastsTableViewController.swift in Sources */,
 				EA2AB97B2051E33F00BB28B5 /* ForecastsViewModel.swift in Sources */,
 				EA2AB9812051FB0800BB28B5 /* Forecast.swift in Sources */,
 				EA0E8FF12051089E00C5AC7C /* AppDelegate.swift in Sources */,
@@ -418,7 +419,6 @@
 				EA2AB9842052030600BB28B5 /* ForecastTableViewCell.swift in Sources */,
 				EA2AB98F20562BA100BB28B5 /* ForecastViewModel.swift in Sources */,
 				EA2AB97D2051EAAE00BB28B5 /* Network.swift in Sources */,
-				EA0E90132051127900C5AC7C /* ForecastsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,14 +442,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EA0E8FF42051089E00C5AC7C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA0E8FF52051089E00C5AC7C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EA0E8FF92051089E00C5AC7C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -11,22 +11,30 @@ import CoreLocation
 import RxCocoa
 import RxSwift
 
-class ForecastsTableViewController: UITableViewController {
+class ForecastsTableViewController: UITableViewController, NibIdentifiable {
     
-    private var viewModel: ForecastsViewModel!
+    private let viewModel: ForecastsViewModel
     private let disposeBag = DisposeBag()
-
+    
+    init(viewModel: ForecastsViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: ForecastsTableViewController.nibName, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel = ForecastsViewModel(
-            locationManager: CoreLocationManager(manager: CLLocationManager()),
-            forecastService: DarkSkyForecastService(network: AlamofireNetwork())
-        )
+        
         navigationItem.title = "Forecast"
-        let permissionsButton = UIBarButtonItem()
-        permissionsButton.title = "Request"
+        
         tableView.registerCell(ForecastTableViewCell.self)
         tableView.rowHeight = 60
+        
+        let permissionsButton = UIBarButtonItem()
+        permissionsButton.title = "Request"
         bindViewModel(barButtonItem: permissionsButton)
     }
     
